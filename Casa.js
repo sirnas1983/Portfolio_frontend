@@ -1,3 +1,0 @@
-function contador(max){
-
-}
