@@ -2,46 +2,41 @@
 
 <html lang="en">
 
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link href="dist/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <title>Darian's Portfolio</title>
-  </head>
-
-  <body>
+</head>
+<body class="bg-dark">
     <!-- Bootstrap JS -->
-    <script src="dist/bootstrap/js/bootstrap.bundle.js"></script>
-      <div class="row">
-        <div class="col-sm-6 p-5 text-center bg-warning">
-          <h1>Atado y compilado</h1>
-        </div>
-        <div class="col-sm-6 p-5 bg-primary text-white text-center">
-          <h1>My First Bootstrap Page</h1>
-        <p>Resize this responsive page to see the effect!</p>
-        </div>
+    <script src="dist/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Barra de navegacion superior -->
+  <div class="container p-2"> 
+    <div class="navbar navbar-expand bg-dark fixed-top">
+      <div class="container-fluid mx-auto">
+          <div class="navbar-brand mx-auto">
+            <img src="ico/APLogo-20-20.png" alt="Logo argentina programa" style="max-height:80px;" class="rounded;">
+          </div>
+          <div class="container">
+            <h6 class="text-white vertical-align">#YoProgramo</h6>
+          </div>
+          <div class="btn-group me-2">
+            <button class="btn btn-success btn-sm float-sm-end" type="button">LOGIN</button>
+          </div>
       </div>
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-sm-4">
-            <h1>Column 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>Column 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>Column 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+    <!-- Banner y foto personal -->
+  <div class="container-fluid">
+        <div style="position:relative; margin-top: 90px; margin-left: 10px; margin-right: 10px; z-index: -1;">
+          <img class="rounded img-fluid" src="https://img.freepik.com/premium-vector/abstrackt-background-matrix-style_92218-33.jpg?w=2000" alt="Matrix">
+          <div style="position:absolute; transform: translate(10%, -50%); z-index: 3;">
+            <img style=" max-width:150px ;max-height: 150px; border-radius: 50%;" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="Matrix">
           </div>
         </div>
-      </div>
-   
+  </div>
 </body>
 </html>
