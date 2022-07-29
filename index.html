@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="es">
 
 <head>
     <!-- Required meta tags -->
@@ -9,34 +9,54 @@
     <!-- Bootstrap CSS -->
     <link href="dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <title>Darian's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="ico/favicon.jpg">
+    <style>
+    </style>
 </head>
 <body class="bg-dark">
     <!-- Bootstrap JS -->
     <script src="dist/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Barra de navegacion superior -->
-  <div class="container p-2"> 
-    <div class="navbar navbar-expand bg-dark fixed-top">
-      <div class="container-fluid mx-auto">
-          <div class="navbar-brand mx-auto">
-            <img src="ico/APLogo-20-20.png" alt="Logo argentina programa" style="max-height:80px;" class="rounded;">
-          </div>
-          <div class="container">
-            <h6 class="text-white vertical-align">#YoProgramo</h6>
-          </div>
-          <div class="btn-group me-2">
-            <button class="btn btn-success btn-sm float-sm-end" type="button">LOGIN</button>
-          </div>
-      </div>
+    <div class="navbar navbar-expand-sm bg-dark justify-content-start" style="position:sticky;">
+      <ul class="container-fluid ms-2">
+          <li class="nav-item navbar-brand">
+            <img src="ico/APLogo-20-21.png" alt="Logo argentina programa" style="max-height: 50px;" class="rounded;">
+          </li>
+          <li class="nav-item float-start">
+            <h4 class="text-white vertical-align">#YoProgramo</h4>
+          </li>
+          <li class="nav-item mx-auto">
+          </li>
+          <li class="nav-item">
+            <div class=" btn-group float-end">
+              <button class="btn btn-success float-sm-end" type="button">LOGIN</button>
+            </div>
+          </li>
+      </ul>
     </div>
-  </div>
+  
     <!-- Banner y foto personal -->
+  
   <div class="container-fluid">
-        <div style="position:relative; margin-top: 90px; margin-left: 10px; margin-right: 10px; z-index: -1;">
-          <img class="rounded img-fluid" src="https://img.freepik.com/premium-vector/abstrackt-background-matrix-style_92218-33.jpg?w=2000" alt="Matrix">
+        <div style="position:relative;">
+          <!-- Banner -->
+          <img class="img-fluid rounded" style="max-height: 768px; width: 100%;" src="https://www.inti.tv/wp-content/uploads/2021/05/El-significado-sanador-del-si%CC%81mbolo-del-infinito.png" alt="Banner">
           <div style="position:absolute; transform: translate(10%, -50%); z-index: 3;">
-            <img style=" max-width:150px ;max-height: 150px; border-radius: 50%;" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="Matrix">
+            <!-- Foto de portada -->
+            <img style="max-width:150px ;max-height: 150px; border-radius: 50%;" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="Foto de portada">
           </div>
         </div>
+  </div>
+<!-- Datos personales y biografia -->
+  <div class="container-fluid row" style="margin-top: 100px;">
+      <div class="col-sm-3">
+        <p class="text-info p-2">
+        Esto es solo un poco de texto para terminar de redondear una idea de donde van a ir ubicadas las distintas
+        columnas dentro de la aplicacion web.
+
+        Veremos que sale de todo esto!
+        </p>
+      </div>
   </div>
 </body>
 </html>
