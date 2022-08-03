@@ -1,24 +1,22 @@
 <!doctype html>
-
-<html lang="es">
-
+<html lang="es-AR">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link href="dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/bootstrap/css/bootstrap.css" rel="stylesheet">
     <title>Darian's Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="ico/favicon.jpg">
-    <style>
-    </style>
+    <link rel="icon" type="image/x-icon" href="ico/Favicon_HD.png">
 </head>
-<body class="bg-dark">
+<body style="background-color: rgb(54, 56, 49);">
+    <!-- FontAwesome -->
+    <script src="http://kit.fontawesome.com/f31b8a5276.js" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="dist/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Barra de navegacion superior -->
-    <div class="navbar navbar-expand-sm bg-dark justify-content-start" style="position:sticky;">
-      <ul class="container-fluid ms-2">
+    <div class="navbar navbar-expand-sm justify-content-start" style="position:sticky;">
+      <ul style="list-style-type: none;" class="container-fluid ms-2">
           <li class="nav-item navbar-brand">
             <img src="ico/APLogo-20-21.png" alt="Logo argentina programa" style="max-height: 50px;" class="rounded;">
           </li>
@@ -33,30 +31,56 @@
             </div>
           </li>
       </ul>
-    </div>
-  
-    <!-- Banner y foto personal -->
-  
-  <div class="container-fluid">
-        <div style="position:relative;">
-          <!-- Banner -->
-          <img class="img-fluid rounded" style="max-height: 768px; width: 100%;" src="https://www.inti.tv/wp-content/uploads/2021/05/El-significado-sanador-del-si%CC%81mbolo-del-infinito.png" alt="Banner">
-          <div style="position:absolute; transform: translate(10%, -50%); z-index: 3;">
-            <!-- Foto de portada -->
-            <img style="max-width:150px ;max-height: 150px; border-radius: 50%;" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="Foto de portada">
+    </div> 
+    <div class="card m-1 border-3 border-dark">
+        <div id="banner">
+            <img id="banner" style="width: 100%;" src="img/banner.jpg" alt="Banner">
+        </div>
+        <div id="info" style="padding:16px;">
+            <div id="info-foto" >
+                <div class="profile-image">
+                  <img id="profile-image" class="rounded-pill" style="max-width: 200px; margin-top:-116px;" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="Foto de perfil">
+                <div class="btn">
+                  <a href="#" class="btn-right">
+                    <i class="fa fa-pencil" style="color:azure; margin-left: -40px;">
+                    </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8 card-body text-white">
+            <h2>Darian A. Hiebl</h2>
+            <h4>Estudiante en Argentina Programa #YoProgramo</h4>
+            <h6>Programador Sr. de sistemas de control Siemens S7-1200</h6>
+            <p><a href="#">Informacion de contacto</a><p>
+          </div>
+          <div class="col-sm-4">
+              <ul style="list-style-type: none;" class="p-2">
+                <li>
+                  <h5 class="text-white">
+                    <u>Links de interés:</u>
+                  </h5>
+                </li>
+                <li>
+                  <a href="https://argentinaprograma.inti.gob.ar/" target="_blank">
+                    <img class="img-fluid" style="max-height: 2.5rem;" src="ico/APLogo-20-21.png" alt="Argentina Programa">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.frre.utn.edu.ar/" target="_blank">
+                    <img class="img-fluid" style="max-height: 2.5rem;" src="ico/UTN_FRRE-www.png" alt="UTN Facultad regional Resistencia">
+                  </a>
+                </li>
+              </ul>
           </div>
         </div>
-  </div>
-<!-- Datos personales y biografia -->
-  <div class="container-fluid row" style="margin-top: 100px;">
-      <div class="col-sm-3">
-        <p class="text-info p-2">
-        Esto es solo un poco de texto para terminar de redondear una idea de donde van a ir ubicadas las distintas
-        columnas dentro de la aplicacion web.
-
-        Veremos que sale de todo esto!
-        </p>
-      </div>
-  </div>
+        <div class="p-3">
+          <button type="button" class="btn btn-sm btn-success" >Agregar</button>
+          <button type="button" class="btn btn-sm btn-success">Modificar</button>
+          <button type="button" class="btn btn-sm btn-success" >Eliminar</button>
+        </div>
+    </div> 
 </body>
 </html>

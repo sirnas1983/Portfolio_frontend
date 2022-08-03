@@ -4231,6 +4231,11 @@ textarea.form-control-lg {
 .navbar-dark .navbar-text a:focus {
   color: #fff;
 }
+#banner {
+  min-width: 100%;
+  border: none;
+  border-radius: 1.5rem;
+}
 
 .card {
   position: relative;
@@ -4238,10 +4243,10 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: rgba(17, 1, 1, 0);
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border: 1px solid rgba(250, 229, 38, 0.945);
+  border-radius: 1.75rem;
 }
 .card > hr {
   margin-right: 0;
