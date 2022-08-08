@@ -4,83 +4,359 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
     <!-- Bootstrap CSS -->
     <link href="dist/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <title>Darian's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="ico/Favicon_HD.png">
-</head>
-<body style="background-color: rgb(54, 56, 49);">
+    <link href="dist/style.css" rel="stylesheet">
+    <title>WEB Portfolio - Hiebl, Darian</title>
     <!-- FontAwesome -->
     <script src="http://kit.fontawesome.com/f31b8a5276.js" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="dist/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Barra de navegacion superior -->
-    <div class="navbar navbar-expand-sm justify-content-start" style="position:sticky;">
-      <ul style="list-style-type: none;" class="container-fluid ms-2">
+    <script src="dist/MyScript.js"></script>
+</head>
+<body>
+    <!-- Barra de navegacion superior -->
+    <div id="navbar" class="navbar navbar-expand-sm bg-dark rounded-bottom">
+      <ul class="container-fluid ms-2" id="navbar-links-list">
           <li class="nav-item navbar-brand">
-            <img src="ico/APLogo-20-21.png" alt="Logo argentina programa" style="max-height: 50px;" class="rounded;">
+            <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img src="ico/APLogo-20-21.png" alt="Logo argentina programa" class="light-icon rounded navbar-images"></a>
           </li>
-          <li class="nav-item float-start">
-            <h4 class="text-white vertical-align">#YoProgramo</h4>
+          <li class="nav-item float-start navbar-images">
+            <h4 class="vertical-align text-white">#YoProgramo</h4>
           </li>
           <li class="nav-item mx-auto">
           </li>
           <li class="nav-item">
             <div class=" btn-group float-end">
-              <button class="btn btn-success float-sm-end" type="button">LOGIN</button>
+              <button class="btn btn-primary float-sm-end" type="button">LOGIN</button>
             </div>
           </li>
       </ul>
     </div> 
-    <div class="card m-1 border-3 border-dark">
-        <div id="banner">
-            <img id="banner" style="width: 100%;" src="img/banner.jpg" alt="Banner">
+    <div id="portfolio-body">
+<!-- Tarjeta principal -->
+    <div id="presentation-card" class="card m-3 border-3 p-1 border-dark">
+        <div>
+          <img id="banner" src="img/banner.jpg" alt="Banner">
         </div>
         <div id="info" style="padding:16px;">
-            <div id="info-foto" >
-                <div class="profile-image">
-                  <img id="profile-image" class="rounded-pill" style="max-width: 200px; margin-top:-116px;" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="Foto de perfil">
-                <div class="btn">
-                  <a href="#" class="btn-right">
-                    <i class="fa fa-pencil" style="color:azure; margin-left: -40px;">
-                    </i>
-                  </a>
-                </div>
+          <div id="info-foto" >
+            <div class="profile-image">
+              <img id="profile-image" src="img/profile-picture.jpg" alt="Foto de perfil">
+              <div class="btn">
+                <a href="#" class="btn" style="margin-left: -20px;">
+                  <span class="fa-solid fa-lg fa-pencil"></span>
+                </a>
               </div>
             </div>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-sm-8 card-body text-white">
+        <div class="row ms-3">
+          <div class="col-sm-8 card-body">
             <h2>Darian A. Hiebl</h2>
             <h4>Estudiante en Argentina Programa #YoProgramo</h4>
             <h6>Programador Sr. de sistemas de control Siemens S7-1200</h6>
-            <p><a href="#">Informacion de contacto</a><p>
+            <p>Ingeniero en casi todo, autodidacta, persistente y con hambre de aprender</p>
+            <p><a href="" data-bs-toggle="modal" data-bs-target="#info-contacto">Informacion de contacto</a><p>
           </div>
           <div class="col-sm-4">
-              <ul style="list-style-type: none;" class="p-2">
+              <ul class="no-list-style p-2">
                 <li>
-                  <h5 class="text-white">
+                  <h4>
                     <u>Links de interés:</u>
-                  </h5>
+                  </h4>
                 </li>
                 <li>
                   <a href="https://argentinaprograma.inti.gob.ar/" target="_blank">
-                    <img class="img-fluid" style="max-height: 2.5rem;" src="ico/APLogo-20-21.png" alt="Argentina Programa">
+                    <img class="img-fluid mt-2 light-icon list-icon" src="ico/APLogo-20-21.png" alt="Argentina Programa">
                   </a>
                 </li>
                 <li>
                   <a href="https://www.frre.utn.edu.ar/" target="_blank">
-                    <img class="img-fluid" style="max-height: 2.5rem;" src="ico/UTN_FRRE-www.png" alt="UTN Facultad regional Resistencia">
+                    <img class="img-fluid mt-2 dark-icon list-icon" src="ico/UTN_FRRE-www.png" alt="UTN Facultad regional Resistencia">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/" target="_blank">
+                    <img class="img-fluid mt-2 dark-icon list-icon" src="ico/GitHub ico.png" alt="GitHub">
                   </a>
                 </li>
               </ul>
           </div>
         </div>
         <div class="p-3">
-          <button type="button" class="btn btn-sm btn-success" >Agregar</button>
-          <button type="button" class="btn btn-sm btn-success">Modificar</button>
-          <button type="button" class="btn btn-sm btn-success" >Eliminar</button>
+          <button type="button" class="btn btn-primary boton" >Tengo interés en</button>
+          <button type="button" class="btn btn-secondary boton">Agregar</button>
+          <button type="button" class="btn btn-secondary boton" >Mas</button>
         </div>
-    </div> 
+    </div>
+    <!-- Ventana informacion de contacto -->
+    <div class="modal fade" id="info-contacto">
+      <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h4 class="modal-title">INFORMACION DE CONTACTO</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>Direccion correo electronico: <a href="mailto: dahiebl@gmail.com">dahiebl@gmail.com</a></p>
+            <p>Whatsapp: <a href="https://api.whatsapp.com/send?phone=5493774419374" target="_blank">+54 9 3774 419374</a></p>
+            <p>GitHUB: <a href="https://github.com/sirnas1983" target="_blank">Ir a mi repositorio remoto</a></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Acerca de mi -->
+    <div id="aboutme-card" class="card m-3 border-3 p-3 border-dark">
+      <div class="row"> 
+        <div class="col-6">
+            <h3><u>ACERCA DE MI</u></h3>
+        </div>
+        <div class="col-6">
+          <button id="chevron-acerca" onclick="desplegar('acerca-visible','chevron-acerca').js" class="btn fa-solid float-end fa-arrows-up-to-line"></button>
+          <a href="#" class="float-end me-3">
+            <span class="fa-solid fa-lg fa-pencil"></span>
+          </a>        
+        </div>
+      </div>
+      <div id="acerca-visible" class="row">
+        <div class="col-sm-12">
+          <p>38 años, conservador, padre de 2. Maestro mayor de obras y estudiante avanzado de ingenieria civil. Apasionado por la electronica y el control 
+            de procesos, como ser la robotica aplicada a la industria y el IoT. Cerca de mis 28 años se desperto mi interes en estudiar 
+            electricidad industrial, automatismo y programacion avanzada.
+          </p>
+          <p>
+            Mi primer experiencia en el mundo de la programacion, y casi la unica en forma cotideana, fue el uso de VisualBasic para programar 
+            macros en Excel.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+    <!-- ESTUDIOS -->
+    <div id="knowledge-card" class="card m-3 border-3 p-3 border-dark">
+      <div class="row"> 
+        <div class="col-6">
+          <h3><u>ESTUDIOS</u></h3>
+        </div>        
+        <div class="col-6"><button id="chevron-estudios" onclick="desplegar('estudio-visible','chevron-estudios').js" class="btn fa-solid float-end fa-arrows-up-to-line">
+          </button><button class="btn float-end fa-solid fa-add"></button>
+        </div>
+      </div>
+      <div id="estudio-visible">
+      <div class="row lh-1 mt-4">
+      <div class="col-sm-6">
+        <ul>
+          <li>
+            <div><h4>Maestro mayor de obras</h4></div>
+            <div><p><i>Nivel educativo:</i> Secundario</p></div>
+            <div><p><i>Establecimiento:</i> EPET N°1</p></div>
+            <div><p><i>Lugar:</i> Grande, Tierra del Fuego</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4">           
+        <ul class="no-list-style">  
+          <li><p><i>Año de ingreso:</i> 1996</p></li>
+          <li><p><i>Año de egreso:</i> 2002</p></li>
+          <li><p><i>Promedio:</i> 8.34</p></li>
+          <li><p><i>Link:</i> <a href="http://www.epetrg.edu.ar/" target="_blank">http://www.epetrg.edu.ar/</a></p></li>
+        </ul>
+      </div>
+      <div class="col-sm-2">           
+        <a href="#" class="float-end ms-3"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+      </div>
+    </div>
+    <hr>
+    <div class="row lh-1 mt-4">
+      <div class="col-sm-6">
+        <ul>
+        <li>
+          <div><h4>Ingeniero Civil</h4></div>
+          <div><p><i>Nivel educativo:</i> Universitario</p></div>
+          <div><p><i>Establecimiento:</i> U.N.L.P. - Universidad Nacional de La Plata</p></div>
+          <div><p><i>Lugar:</i> La Plata, Buenos Aires</p></div>
+        </li>
+        </ul>
+      </div>
+      <div class="col-sm-4">           
+        <ul class="no-list-style"> 
+          <li><p><i>Año de ingreso:</i> 2002</p></li>
+          <li><p><i>Año de egreso:</i> Incompleto</p></li>
+          <li><p><i>Promedio:</i> 7.66</p></li>
+          <li><p><i>Link:</i> <a href="https://unlp.edu.ar/" target="_blank">https://unlp.edu.ar/</a></p></li>
+        </ul>
+      </div>
+      <div class="col-sm-2">           
+        <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+      </div>
+    </div>
+    </div>
+    </div>
+    <!-- IDIOMAS -->
+    <div id="language-card" class="card m-3 border-3 p-3 border-dark">
+      <div class="row"> 
+        <div class="col-6"><h3><u>IDIOMAS</u></h3></div>
+        <div class="col-6"><button id="chevron-lenguaje" onclick="desplegar('idiomas-visible','chevron-lenguaje').js" class="btn fa-solid float-end fa-arrows-up-to-line"></button><button class="btn float-end fa-solid fa-add"></button></div>
+      </div>
+      <div id="idiomas-visible">
+      <div class="row lh-1 mt-1">
+        <div class="col-sm-10">
+          <ul>
+          <li><div class="col-sm"><h4>INGLES</h4></div>
+            <ul class="no-list-style">
+              <li><p><i>Oral:</i> Nativo</p></li>
+              <li><p><i>Escrito:</i> Nativo</p></li>
+              <li><p><i>Comprension de texto:</i> Nativo</p></li>
+            </ul>
+          </li>
+          </ul>
+        </div>
+        <div class="col-sm-2">           
+          <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+        </div>
+      </div>
+      <hr>
+      <div class="row lh-1 mt-1">
+        <div class="col-sm-10">
+          <ul>
+          <li><div class="col-sm"><h4>PORTUGUES</h4></div>
+            <ul class="no-list-style">
+              <li><p><i>Oral:</i> Basico</p></li>
+              <li><p><i>Escrito:</i> Basico</p></li>
+              <li><p><i>Comprension de texto:</i> Bueno</p></li>
+            </ul>
+          </li>
+          </ul>
+        </div>
+        <div class="col-sm-2">           
+          <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+        </div>
+      </div>
+      </div>
+    </div>        
+    <!-- Experiencia Laboral -->
+    <div id="expertize-card" class="card m-3 border-3 p-3 border-dark">
+      <div class="row"> 
+        <div class="col-6"><h3><u>EXPERIENCIA LABORAL</u></h3></div>
+        <div class="col-6"><button id="chevron-experiencia" onclick="desplegar('experiencia-visible','chevron-experiencia').js" class="btn fa-solid float-end fa-arrows-up-to-line"></button><button class="btn float-end fa-solid fa-add"></button></div>
+      <div id="experiencia-visible">
+      <div class="row lh-1 mt-4">
+        <div class="col-sm-10">
+          <ul>
+          <li>
+            <div><h4>Cadista en Bifurcacion Ruta N°2 y Ruta N°36</h4></div>
+            <div><p><i>Empresa:</i> Esuco SA - ICF SA (UTE)</p></div>
+            <div><p><i>Área:</i> Construccion</p></div>
+            <div><p><i>Tareas Realizadas:</i> Encargado de las mediciones de obra y computo metrico de la misma. 
+            Realizacion de proyectos adicionales y modificaciones de obra. Ejecucion de planos conforme a obra y 
+            medicion final de la misma. Sin personas a cargo.</p></div>
+            <div><p><i>Desde:</i> Jun-2006 <i>Hasta:</i> Oct-2007</p></div>
+            <div><p><i>Lugar:</i> Florencio Varela, Buenos Aires</p></div>
+            <a href="#">Galeria (optativo)</a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-sm-2">           
+          <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+        </div>
+      </div>
+      <hr>
+      <div class="row lh-1 mt-4">
+        <div class="col-sm-10">
+          <ul>
+          <li>
+            <div><h4>Jefe de topografía en Tramo 7, Sección 1 Autovia RN N°14</h4></div>        
+            <div><p><i>Empresa:</i> TECHINT SACIF - ICF SA - HIDRACO SA (UTE)</p></div>
+            <div><p><i>Área:</i> Construcción</p></div>
+            <div><p><i>Tareas Realizadas:</i> Encargado de la organización de los topografos de obra y sus tareas
+            diarias en obra. Ejecucion de mediciones de obra, canteras y todo lo relacionado al proyecto ejecutivo.
+            </p></div>
+            <div><p><i>Desde:</i> Oct-2007 <i>Hasta:</i> Ene-2009</p></div>
+            <div><p><i>Lugar:</i> Monte Caseros, Corrientes</p></div>
+            <a href="#">Galeria (optativo)</a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-sm-2">           
+          <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    <!-- CURSOS -->
+    <div id="course-card" class="card m-3 border-3 p-3 border-dark">
+      <div class="row"> 
+        <div class="col-6"><h3><u>CURSOS Y CONOCIMIENTOS</u></h3></div>
+        <div class="col-6"><button id="chevron-cursos" onclick= "desplegar('cursos-visible','chevron-cursos').js" class="btn fa-solid float-end fa-arrows-up-to-line"></button><button class="btn float-end fa-solid fa-add"></button></div>
+      </div>
+      <div id="cursos-visible">
+        <div class="row lh-1 mt-4">
+          <div class="col-sm-10">
+            <ul>
+            <li>
+              <div><h4>Programacion con Micro PLC</h4></div>
+              <div><p><i>Institucion:</i> UTN - Facultad Regional Resistencia</p></div>
+              <div><p><i>Área:</i> Informatica</p></div>
+              <div><p><i>Descripcion:</i> Programacion en micro PLC. Diagramas de bloque y ladder para programacion
+              de micro PLC de (gama baja).</p></div>
+              <div><p><i>Duracion:</i> 6 meses</p></div>
+              <div><p><i>Nivel:</i> Universitario</p></div>
+            </li>
+            </ul>
+          </div>
+          <div class="col-sm-2">           
+            <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+          </div>
+        </div>
+        <hr>
+        <div class="row lh-1 mt-4">
+          <div class="col-sm-10">
+            <ul>
+            <li>
+              <div><h4>Programacion PLC S7-1200</h4></div>
+              <div><p><i>Institucion:</i> UTN - Facultad Regional Resistencia</p></div>
+              <div><p><i>Área:</i> Informatica</p></div>
+              <div><p><i>Descripcion:</i> Programacion de PLC S7-1200 de Siemens. Programacion avanzada en PLC marca Siemens
+              a traves del software TIA Portal (totaly integrated application). La gama S7 de Siemens representa la mas alta gama
+              reles logicos programables.</p></div>
+              <div><p><i>Duracion:</i> 6 meses</p></div>
+              <div><p><i>Nivel:</i> Universitario</p></div>
+            </li>
+            </ul>
+          </div>
+          <div class="col-sm-2">           
+            <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+          </div>
+        </div>
+        <hr>
+        <div class="row lh-1 mt-4">
+        <div class="col-sm-10">
+          <ul>
+          <li>
+            <div><h4>Instalaciones Electricas Domiciliarias</h4></div>
+            <div><p><i>Institucion:</i> Universidad del Chaco Austral (UNCAUS)</p></div>
+            <div><p><i>Área:</i> Ingenieria</p></div>
+            <div><p><i>Descripcion:</i> Calculo de potencia, tableros, seccion de cables, protecciones, cañerias, etc. 
+            Elaboracion de proyecto ejecutivo en vivienda unifamiliar. </p></div>
+            <div><p><i>Duracion:</i> 6 meses</p></div>
+            <div><p><i>Nivel:</i> Universitario</p></div>
+          </li>
+          </ul>
+        </div>
+        <div class="col-sm-2">           
+          <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
