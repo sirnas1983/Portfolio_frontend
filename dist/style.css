@@ -21,11 +21,11 @@
 }
 
 .habilidad, .habilidad-cierre {
-    background-color: rgb(44, 118, 255);
+    background-color: rgb(114, 156, 235);
     display: inline-block;
     padding: 0.35em 0.65em;
     font-size: 0.75em;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
     color: #fff;
     text-align: center;
@@ -33,6 +33,7 @@
     vertical-align: baseline;
     border-radius: 0.75rem;
     margin-bottom: 0.3em;
+    margin-top: 0.3em;
 }
 
 .habilidad-cierre {
@@ -43,8 +44,9 @@
 #presentation-card, #skills-card, #expertize-card, #knowledge-card, #aboutme-card, #language-card, #course-card {
     background-color: rgba(254, 254, 248, 0.95);
     color:black;
-    margin: 0.75rem 0.5rem;
-    border: 0.5rem solid rgb(81, 98, 105);
+    margin: 0.25rem 0.5rem;
+    border: 0.2rem solid rgb(81, 98, 105);
+    padding: 1.8rem 1rem;
 }
 
 #btn-modal {
@@ -73,17 +75,18 @@
 #banner {
     border-radius: 1.5rem; 
     max-height:540px; 
-    width: 100%; 
+    width: 100%;
+    margin-top: -0.75em; 
 }
 
 h1, h2, h3, h4, h5, h6 {
-    
     font-weight: 600;
 }
 
 #profile-image{
     max-width: 200px; 
-    margin-top:-120px;
+    margin-top:-100px;
+    margin-left: 20px;
     border-radius: 50%;
     box-shadow: 5px 5px 10px black, -5px -5px 10px black, -5px 5px 10px black, 5px -5px 10px black;
 }

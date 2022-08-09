@@ -18,31 +18,77 @@
     <script src="dist/MyScript.js"></script>
 </head>
 <body>
-    <!-- Barra de navegacion superior -->
-    <div id="navbar" class="navbar navbar-expand-sm bg-dark rounded-bottom">
-      <ul class="container-fluid ms-2" id="navbar-links-list">
-          <li class="nav-item navbar-brand">
-            <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img src="ico/APLogo-20-21.png" alt="Logo argentina programa" class="light-icon rounded navbar-images"></a>
-          </li>
-          <li class="nav-item float-start navbar-images">
-            <h4 class="vertical-align text-white">#YoProgramo</h4>
-          </li>
-          <li class="nav-item mx-auto">
-          </li>
-          <li class="nav-item">
-            <div class=" btn-group float-end">
-              <button class="btn btn-primary float-sm-end" type="button">LOGIN</button>
+<!-- Barra de navegacion superior -->
+<div id="navbar" class="navbar navbar-expand-sm bg-dark rounded-bottom">
+  <ul class="container-fluid ms-2" id="navbar-links-list">
+      <li class="nav-item navbar-brand">
+        <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img src="ico/APLogo-20-21.png" alt="Logo argentina programa" class="light-icon rounded navbar-images"></a>
+      </li>
+      <li class="nav-item float-start navbar-images">
+        <h4 class="vertical-align text-white">#YoProgramo</h4>
+      </li>
+      <li class="nav-item mx-auto">
+      </li>
+      <li class="nav-item">
+        <div class=" btn-group float-end">
+          <button class="btn btn-primary float-sm-end" data-bs-toggle="modal" data-bs-target="#login" type="button">LOGIN</button>
+        </div>
+      </li>
+  </ul>
+</div> 
+<div id="portfolio-body">
+
+<!--FORMULARIO DE LOGIN-->
+<div class="modal fade" id="login">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+    <div class="modal-content">
+        <div class="modal-header bg-primary">
+          <h4 class="modal-title">LOGIN</h4>
+          <button type="button" id="btn-modal" class="btn fa-solid fa-lg fa-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body bg-dark">
+          <form action="#">
+            <div class="mb-3 mt-3">
+              <label for="email" class="form-label">Nombre de usuario:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
             </div>
-          </li>
-      </ul>
-    </div> 
-    <div id="portfolio-body">
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Contraseña:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="form-check mb-3">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Recordar
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">ENVIAR</button>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Ventana informacion de contacto -->
+<div class="modal fade" id="info-contacto">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h4 class="modal-title">INFORMACION DE CONTACTO</h4>
+        <button type="button" id="btn-modal" class="btn fa-solid fa-lg fa-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body bg-dark">
+        <p>Direccion correo electronico: <a href="mailto: dahiebl@gmail.com">dahiebl@gmail.com</a></p>
+        <p>Whatsapp: <a href="https://api.whatsapp.com/send?phone=5493774419374" target="_blank">+54 9 3774 419374</a></p>
+        <p>GitHUB: <a href="https://github.com/sirnas1983" target="_blank">Ir a mi repositorio remoto</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Tarjeta principal -->
-    <div id="presentation-card" class="card m-3 border-3 p-1">
-        <div>
+    <div id="presentation-card" class="card">
+        <div style="margin:-0.5em;">
           <img id="banner" src="img/banner.jpg" alt="Banner">
         </div>
-        <div id="info" style="padding:16px;">
+        <div id="info" style="padding:0px;">
           <div id="info-foto" >
             <div class="profile-image">
               <img id="profile-image" src="img/profile-picture.jpg" alt="Foto de perfil">
@@ -63,7 +109,7 @@
             <p><a href="" data-bs-toggle="modal" data-bs-target="#info-contacto">Informacion de contacto</a><p>
           </div>
           <div class="col-sm-4">
-              <ul class="no-list-style p-2">
+            <ul class="no-list-style p-2">
                 <li>
                   <h4>
                     <u>Links de interés:</u>
@@ -88,35 +134,22 @@
           </div>
         </div>
         <div class="p-3">
-          <button type="button" class="btn btn-primary boton" >Tengo interés en</button>
-          <button type="button" class="btn btn-secondary boton">Agregar</button>
-          <button type="button" class="btn btn-secondary boton" >Mas</button>
+          <a href="#aboutme-card"><button type="button" class="btn btn-secondary boton" >Acerca de mi</button></a>
+          <a href="#skills-card"><button type="button" class="btn btn-secondary boton">Habilidades</button></a>
+          <a href="#knowledge-card"><button type="button" class="btn btn-secondary boton" >Estudios</button></a>
+          <a href="#language-card"><button type="button" class="btn btn-secondary boton" >Idiomas</button></a>
+          <a href="#expertize-card"><button type="button" class="btn btn-secondary boton" >Experiencia laboral</button></a>
+          <a href="#course-card"><button type="button" class="btn btn-secondary boton" >Conocimientos</button></a>
         </div>
-    </div>
-    <!-- Ventana informacion de contacto -->
-    <div class="modal fade" id="info-contacto">
-      <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
-        <div class="modal-content">
-          <div class="modal-header bg-primary">
-            <h4 class="modal-title">INFORMACION DE CONTACTO</h4>
-            <button type="button" id="btn-modal" class="btn fa-solid fa-lg fa-close" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body bg-dark">
-            <p>Direccion correo electronico: <a href="mailto: dahiebl@gmail.com">dahiebl@gmail.com</a></p>
-            <p>Whatsapp: <a href="https://api.whatsapp.com/send?phone=5493774419374" target="_blank">+54 9 3774 419374</a></p>
-            <p>GitHUB: <a href="https://github.com/sirnas1983" target="_blank">Ir a mi repositorio remoto</a></p>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- Acerca de mi -->
-    <div id="aboutme-card" class="card m-3 border-3 p-3">
+    <div id="aboutme-card" class="card">
       <div class="row"> 
         <div class="col-6">
             <h3>Acerca de mi</h3>
         </div>
         <div class="col-6">
-          <button id="chevron-acerca" onclick="desplegar('acerca-visible','chevron-acerca').js" class="btn fa-solid float-end fa-chevron-up"></button>
+          <button id="chevron-acerca" onclick="desplegar('acerca-visible','chevron-acerca')" class="btn fa-solid float-end fa-chevron-up"></button>
           <a href="#" class="float-end me-3">
             <span class="fa-solid fa-lg fa-pencil"></span>
           </a>        
@@ -137,13 +170,13 @@
       </div>
     </div>
     <!-- Hard y soft skills-->
-    <div id="skills-card" class="card m-3 border-3 p-3">
+    <div id="skills-card" class="card">
       <div class="row"> 
         <div class="col-6">
             <h3>Habilidades</h3>
         </div>
         <div class="col-6">
-          <button id="chevron-habilidades" onclick="desplegar('habilidades-visible','chevron-habilidades').js" class="btn fa-solid float-end fa-chevron-up"></button>
+          <button id="chevron-habilidades" onclick="desplegar('habilidades-visible','chevron-habilidades')" class="btn fa-solid float-end fa-chevron-up"></button>
         </div>
       </div>
       <div id="habilidades-visible">
@@ -175,12 +208,12 @@
       </div>
     </div>
     <!-- ESTUDIOS -->
-    <div id="knowledge-card" class="card m-3 border-3 p-3">
+    <div id="knowledge-card" class="card">
       <div class="row"> 
         <div class="col-6">
           <h3>Estudios</h3>
         </div>        
-        <div class="col-6"><button id="chevron-estudios" onclick="desplegar('estudio-visible','chevron-estudios').js" class="btn fa-solid float-end fa-chevron-up">
+        <div class="col-6"><button id="chevron-estudios" onclick="desplegar('estudio-visible','chevron-estudios')" class="btn fa-solid float-end fa-chevron-up">
           </button><button class="btn float-end fa-solid fa-add"></button>
         </div>
       </div>
@@ -191,18 +224,18 @@
         <ul>
           <li>
             <div><h4>Maestro mayor de obras</h4></div>
-            <div><p><b><i>Nivel educativo:</i></b> Secundario</p></div>
-            <div><p><b><i>Establecimiento:</i></b> EPET N°1</p></div>
-            <div><p><b><i>Lugar:</i></b> Grande, Tierra del Fuego</p></div>
+            <div><p><b>Nivel educativo:</b> Secundario</p></div>
+            <div><p><b>Establecimiento:</b> EPET N°1</p></div>
+            <div><p><b>Lugar:</b> Grande, Tierra del Fuego</p></div>
           </li>
         </ul>
       </div>
       <div class="col-sm-4">           
         <ul class="no-list-style">  
-          <li><p><b><i>Año de ingreso:</i></b> 1996</p></li>
-          <li><p><b><i>Año de egreso:</i></b> 2002</p></li>
-          <li><p><b><i>Promedio:</i></b> 8.34</p></li>
-          <li><p><b><i>Link:</i></b> <a href="http://www.epetrg.edu.ar/" target="_blank">http://www.epetrg.edu.ar/</a></p></li>
+          <li><p><b>Año de ingreso:</b> 1996</p></li>
+          <li><p><b>Año de egreso:</b> 2002</p></li>
+          <li><p><b>Promedio:</b> 8.34</p></li>
+          <li><p><b>Link:</b> <a href="http://www.epetrg.edu.ar/" target="_blank">http://www.epetrg.edu.ar/</a></p></li>
         </ul>
       </div>
       <div class="col-sm-2">           
@@ -215,18 +248,18 @@
         <ul>
         <li>
           <div><h4>Ingeniero Civil</h4></div>
-          <div><p><b><i>Nivel educativo:</i></b> Universitario</p></div>
-          <div><p><b><i>Establecimiento:</i></b> U.N.L.P. - Universidad Nacional de La Plata</p></div>
-          <div><p><b><i>Lugar:</i></b> La Plata, Buenos Aires</p></div>
+          <div><p><b>Nivel educativo:</b> Universitario</p></div>
+          <div><p><b>Establecimiento:</b> U.N.L.P. - Universidad Nacional de La Plata</p></div>
+          <div><p><b>Lugar:</b> La Plata, Buenos Aires</p></div>
         </li>
         </ul>
       </div>
       <div class="col-sm-4">           
         <ul class="no-list-style"> 
-          <li><p><b><i>Año de ingreso:</i></b> 2002</p></li>
-          <li><p><b><i>Año de egreso:</i></b> Incompleto</p></li>
-          <li><p><b><i>Promedio:</i></b> 7.66</p></li>
-          <li><p><b><i>Link:</i></b> <a href="https://unlp.edu.ar/" target="_blank">https://unlp.edu.ar/</a></p></li>
+          <li><p><b>Año de ingreso:</b> 2002</p></li>
+          <li><p><b>Año de egreso:</b> Incompleto</p></li>
+          <li><p><b>Promedio:</b> 7.66</p></li>
+          <li><p><b>Link:</b> <a href="https://unlp.edu.ar/" target="_blank">https://unlp.edu.ar/</a></p></li>
         </ul>
       </div>
       <div class="col-sm-2">           
@@ -236,10 +269,10 @@
     </div>
     </div>
     <!-- IDIOMAS -->
-    <div id="language-card" class="card m-3 border-3 p-3">
+    <div id="language-card" class="card">
       <div class="row"> 
         <div class="col-6"><h3>Idiomas</h3></div>
-        <div class="col-6"><button id="chevron-lenguaje" onclick="desplegar('idiomas-visible','chevron-lenguaje').js" class="btn fa-solid float-end fa-chevron-up"></button><button class="btn float-end fa-solid fa-add"></button></div>
+        <div class="col-6"><button id="chevron-lenguaje" onclick="desplegar('idiomas-visible','chevron-lenguaje')" class="btn fa-solid float-end fa-chevron-up"></button><button class="btn float-end fa-solid fa-add"></button></div>
       </div>
       <div id="idiomas-visible">
       <hr>
@@ -248,9 +281,9 @@
           <ul>
           <li><div class="col-sm"><h4>Inglés</h4></div>
             <ul class="no-list-style">
-              <li><p><b><i>Oral:</i></b> Nativo</p></li>
-              <li><p><b><i>Escrito:</i></b> Nativo</p></li>
-              <li><p><b><i>Comprension de texto:</i></b> Nativo</p></li>
+              <li><p><b>Oral:</b> Nativo</p></li>
+              <li><p><b>Escrito:</b> Nativo</p></li>
+              <li><p><b>Comprension de texto:</b> Nativo</p></li>
             </ul>
           </li>
           </ul>
@@ -265,9 +298,9 @@
           <ul>
           <li><div class="col-sm"><h4>Portugués</h4></div>
             <ul class="no-list-style">
-              <li><p><b><i>Oral:</i></b> Basico</p></li>
-              <li><p><b><i>Escrito:</i></b> Basico</p></li>
-              <li><p><b><i>Comprension de texto:</i></b> Bueno</p></li>
+              <li><p><b>Oral:</b> Basico</p></li>
+              <li><p><b>Escrito:</b> Basico</p></li>
+              <li><p><b>Comprension de texto:</b> Bueno</p></li>
             </ul>
           </li>
           </ul>
@@ -279,10 +312,10 @@
       </div>
     </div>        
     <!-- Experiencia Laboral -->
-    <div id="expertize-card" class="card m-3 border-3 p-3">
+    <div id="expertize-card" class="card">
       <div class="row"> 
         <div class="col-6"><h3>Experiencia Laboral</h3></div>
-        <div class="col-6"><button id="chevron-experiencia" onclick="desplegar('experiencia-visible','chevron-experiencia').js" class="btn fa-solid float-end fa-chevron-up"></button><button class="btn float-end fa-solid fa-add"></button></div>
+        <div class="col-6"><button id="chevron-experiencia" onclick="desplegar('experiencia-visible','chevron-experiencia')" class="btn fa-solid float-end fa-chevron-up"></button><button class="btn float-end fa-solid fa-add"></button></div>
       <div id="experiencia-visible">
       <hr>
       <div class="row lh-1 mt-4">
@@ -290,13 +323,13 @@
           <ul>
           <li>
             <div><h4>Cadista en Bifurcacion Ruta N°2 y Ruta N°36</h4></div>
-            <div><p><b><i>Empresa:</i></b> Esuco SA - ICF SA (UTE)</p></div>
-            <div><p><b><i>Área:</i></b> Construccion</p></div>
-            <div><p><b><i>Tareas Realizadas:</i></b> Encargado de las mediciones de obra y computo metrico de la misma. 
+            <div><p><b>Empresa:</b> Esuco SA - ICF SA (UTE)</p></div>
+            <div><p><b>Área:</b> Construccion</p></div>
+            <div><p><b>Tareas Realizadas:</b> Encargado de las mediciones de obra y computo metrico de la misma. 
             Realizacion de proyectos adicionales y modificaciones de obra. Ejecucion de planos conforme a obra y 
             medicion final de la misma. Sin personas a cargo.</p></div>
-            <div><p><b><i>Desde:</i></b> Jun-2006 <i>Hasta:</i> Oct-2007</p></div>
-            <div><p><b><i>Lugar:</i></b> Florencio Varela, Buenos Aires</p></div>
+            <div><p><b>Desde:</b> Jun-2006 <b>Hasta:</b> Oct-2007</p></div>
+            <div><p><b>Lugar:</b> Florencio Varela, Buenos Aires</p></div>
             <a href="#">Galeria (optativo)</a>
           </li>
           </ul>
@@ -311,13 +344,13 @@
           <ul>
           <li>
             <div><h4>Jefe de topografía en Tramo 7, Sección 1 Autovia RN N°14</h4></div>        
-            <div><p><b><i>Empresa:</i></b> TECHINT SACIF - ICF SA - HIDRACO SA (UTE)</p></div>
-            <div><p><b><i>Área:</i></b> Construcción</p></div>
-            <div><p><b><i>Tareas Realizadas:</i></b> Encargado de la organización de los topografos de obra y sus tareas
+            <div><p><b>Empresa:</b> TECHINT SACIF - ICF SA - HIDRACO SA (UTE)</p></div>
+            <div><p><b>Área:</b> Construcción</p></div>
+            <div><p><b>Tareas Realizadas:</b> Encargado de la organización de los topografos de obra y sus tareas
             diarias en obra. Ejecucion de mediciones de obra, canteras y todo lo relacionado al proyecto ejecutivo.
             </p></div>
-            <div><p><b><i>Desde:</i></b> Oct-2007 <i>Hasta:</i> Ene-2009</p></div>
-            <div><p><b><i>Lugar:</i></b> Monte Caseros, Corrientes</p></div>
+            <div><p><b>Desde:</b> Oct-2007 <b>Hasta:</b> Ene-2009</p></div>
+            <div><p><b>Lugar:</b> Monte Caseros, Corrientes</p></div>
             <a href="#">Galeria (optativo)</a>
           </li>
           </ul>
@@ -330,10 +363,10 @@
   </div>
     </div>
     <!-- CURSOS -->
-    <div id="course-card" class="card m-3 border-3 p-3">
+    <div id="course-card" class="card">
       <div class="row"> 
         <div class="col-6"><h3>Cursos y conocimientos</h3></div>
-        <div class="col-6"><button id="chevron-cursos" onclick= "desplegar('cursos-visible','chevron-cursos').js" class="btn fa-solid float-end fa-chevron-up"></button><button class="btn float-end fa-solid fa-add"></button></div>
+        <div class="col-6"><button id="chevron-cursos" onclick= "desplegar('cursos-visible','chevron-cursos')" class="btn fa-solid float-end fa-chevron-up"></button><button class="btn float-end fa-solid fa-add"></button></div>
       </div>
       <div id="cursos-visible">
         <hr>
@@ -342,12 +375,12 @@
             <ul>
             <li>
               <div><h4>Programacion con Micro PLC</h4></div>
-              <div><p><b><i>Institucion:</i></b> UTN - Facultad Regional Resistencia</p></div>
-              <div><p><b><i>Área:</i></b> Informatica</p></div>
-              <div><p><b><i>Descripcion:</i></b> Programacion en micro PLC. Diagramas de bloque y ladder para programacion
+              <div><p><b>Institucion:</b> UTN - Facultad Regional Resistencia</p></div>
+              <div><p><b>Área:</b> Informatica</p></div>
+              <div><p><b>Descripcion:</b> Programacion en micro PLC. Diagramas de bloque y ladder para programacion
               de micro PLC de (gama baja).</p></div>
-              <div><p><b><i>Duracion:</i></b> 6 meses</p></div>
-              <div><p><b><i>Nivel:</i></b> Universitario</p></div>
+              <div><p><b>Duracion:</b> 6 meses</p></div>
+              <div><p><b>Nivel:</b> Universitario</p></div>
             </li>
             </ul>
           </div>
@@ -361,13 +394,13 @@
             <ul>
             <li>
               <div><h4>Programacion PLC S7-1200</h4></div>
-              <div><p><b><i>Institucion:</i></b> UTN - Facultad Regional Resistencia</p></div>
-              <div><p><b><i>Área:</i></b> Informatica</p></div>
-              <div><p><b><i>Descripcion:</i></b> Programacion de PLC S7-1200 de Siemens. Programacion avanzada en PLC marca Siemens
+              <div><p><b>Institucion:</b> UTN - Facultad Regional Resistencia</p></div>
+              <div><p><b>Área:</b> Informatica</p></div>
+              <div><p><b>Descripcion:</b> Programacion de PLC S7-1200 de Siemens. Programacion avanzada en PLC marca Siemens
               a traves del software TIA Portal (totaly integrated application). La gama S7 de Siemens representa la mas alta gama
               reles logicos programables.</p></div>
-              <div><p><b><i>Duracion:</i></b> 6 meses</p></div>
-              <div><p><b><i>Nivel:</i></b> Universitario</p></div>
+              <div><p><b>Duracion:</b> 6 meses</p></div>
+              <div><p><b>Nivel:</b> Universitario</p></div>
             </li>
             </ul>
           </div>
@@ -381,12 +414,12 @@
           <ul>
           <li>
             <div><h4>Instalaciones Electricas Domiciliarias</h4></div>
-            <div><p><b><i>Institucion:</i></b> Universidad del Chaco Austral (UNCAUS)</p></div>
-            <div><p><b><i>Área:</i></b> Ingenieria</p></div>
-            <div><p><b><i>Descripcion:</i></b> Calculo de potencia, tableros, seccion de cables, protecciones, cañerias, etc. 
+            <div><p><b>Institucion:</b> Universidad del Chaco Austral (UNCAUS)</p></div>
+            <div><p><b>Área:</b> Ingenieria</p></div>
+            <div><p><b>Descripcion:</b> Calculo de potencia, tableros, seccion de cables, protecciones, cañerias, etc. 
             Elaboracion de proyecto ejecutivo en vivienda unifamiliar. </p></div>
-            <div><p><b><i>Duracion:</i></b> 6 meses</p></div>
-            <div><p><b><i>Nivel:</i></b> Universitario</p></div>
+            <div><p><b>Duracion:</b> 6 meses</p></div>
+            <div><p><b>Nivel:</b> Universitario</p></div>
           </li>
           </ul>
         </div>
