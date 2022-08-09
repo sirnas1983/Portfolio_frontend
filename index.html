@@ -19,7 +19,7 @@
 </head>
 <body>
 <!-- Barra de navegacion superior -->
-<div id="navbar" class="navbar navbar-expand-sm bg-dark rounded-bottom">
+<div id="navbar" class="navbar navbar-expand-sm bg-dark">
   <ul class="container-fluid ms-2" id="navbar-links-list">
       <li class="nav-item navbar-brand">
         <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img src="ico/APLogo-20-21.png" alt="Logo argentina programa" class="light-icon rounded navbar-images"></a>
@@ -149,9 +149,11 @@
             <h3>Acerca de mi</h3>
         </div>
         <div class="col-6">
-          <button id="chevron-acerca" onclick="desplegar('acerca-visible','chevron-acerca')" class="btn fa-solid float-end fa-chevron-up"></button>
-          <a href="#" class="float-end me-3">
-            <span class="fa-solid fa-lg fa-pencil"></span>
+          <button id="chevron-acerca" onclick="desplegar('acerca-visible','chevron-acerca')" 
+            class="btn fa-solid float-end fa-chevron-up">
+          </button>
+          <a href="#" class="btn float-end fa-solid fa-home"></a>
+          <a href="#" class="btn float-end fa-solid fa-pencil">
           </a>        
         </div>
       </div>
@@ -176,7 +178,9 @@
             <h3>Habilidades</h3>
         </div>
         <div class="col-6">
-          <button id="chevron-habilidades" onclick="desplegar('habilidades-visible','chevron-habilidades')" class="btn fa-solid float-end fa-chevron-up"></button>
+          <button id="chevron-habilidades" onclick="desplegar('habilidades-visible','chevron-habilidades')" 
+          class="btn fa-solid float-end fa-chevron-up"></button>
+          <a href="#" type="button" class="btn float-end fa-solid fa-home"></a>
         </div>
       </div>
       <div id="habilidades-visible">
@@ -213,8 +217,12 @@
         <div class="col-6">
           <h3>Estudios</h3>
         </div>        
-        <div class="col-6"><button id="chevron-estudios" onclick="desplegar('estudio-visible','chevron-estudios')" class="btn fa-solid float-end fa-chevron-up">
-          </button><button class="btn float-end fa-solid fa-add"></button>
+        <div class="col-6">
+          <button id="chevron-estudios" onclick="desplegar('estudio-visible','chevron-estudios')" 
+          class="btn fa-solid float-end fa-chevron-up">
+          </button>
+          <a href="#" type="button" class="btn float-end fa-solid fa-home"></a>
+          <button class="btn float-end fa-solid fa-add"></button>
         </div>
       </div>
       <div id="estudio-visible">
@@ -239,7 +247,12 @@
         </ul>
       </div>
       <div class="col-sm-2">           
-        <a href="#" class="float-end ms-3"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+        <a href="#" class="float-end ms-3">
+          <span class="fa-solid fa-lg fa-pencil"></span>
+        </a>
+        <a href="#" class="ms-5 float-end">
+          <span class="fa-solid fa-lg fa-trash-can"></span>
+        </a>        
       </div>
     </div>
     <hr>
@@ -263,7 +276,12 @@
         </ul>
       </div>
       <div class="col-sm-2">           
-        <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+        <a href="#" class="ms-3 float-end">
+          <span class="fa-solid fa-lg fa-pencil"></span>
+        </a>
+        <a href="#" class="ms-5 float-end">
+          <span class="fa-solid fa-lg fa-trash-can"></span>
+        </a>        
       </div>
     </div>
     </div>
@@ -272,7 +290,11 @@
     <div id="language-card" class="card">
       <div class="row"> 
         <div class="col-6"><h3>Idiomas</h3></div>
-        <div class="col-6"><button id="chevron-lenguaje" onclick="desplegar('idiomas-visible','chevron-lenguaje')" class="btn fa-solid float-end fa-chevron-up"></button><button class="btn float-end fa-solid fa-add"></button></div>
+        <div class="col-6"><button id="chevron-lenguaje" onclick="desplegar('idiomas-visible','chevron-lenguaje')" 
+          class="btn fa-solid float-end fa-chevron-up"></button>
+          <a href="#" type="button" class="btn float-end fa-solid fa-home"></a>
+          <button class="btn float-end fa-solid fa-add"></button>
+        </div>
       </div>
       <div id="idiomas-visible">
       <hr>
@@ -289,7 +311,12 @@
           </ul>
         </div>
         <div class="col-sm-2">           
-          <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+          <a href="#" class="ms-3 float-end">
+            <span class="fa-solid fa-lg fa-pencil"></span>
+          </a>
+          <a href="#" class="ms-5 float-end">
+            <span class="fa-solid fa-lg fa-trash-can"></span>
+          </a>        
         </div>
       </div>
       <hr>
@@ -306,7 +333,11 @@
           </ul>
         </div>
         <div class="col-sm-2">           
-          <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+          <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span>
+          </a>
+          <a href="#" class="ms-5 float-end">
+            <span class="fa-solid fa-lg fa-trash-can"></span>
+          </a>        
         </div>
       </div>
       </div>
@@ -315,7 +346,11 @@
     <div id="expertize-card" class="card">
       <div class="row"> 
         <div class="col-6"><h3>Experiencia Laboral</h3></div>
-        <div class="col-6"><button id="chevron-experiencia" onclick="desplegar('experiencia-visible','chevron-experiencia')" class="btn fa-solid float-end fa-chevron-up"></button><button class="btn float-end fa-solid fa-add"></button></div>
+        <div class="col-6"><button id="chevron-experiencia" onclick="desplegar('experiencia-visible','chevron-experiencia')" 
+          class="btn fa-solid float-end fa-chevron-up"></button>
+          <a href="#" type="button" class="btn float-end fa-solid fa-home"></a>
+          <button class="btn float-end fa-solid fa-add"></button>
+        </div>
       <div id="experiencia-visible">
       <hr>
       <div class="row lh-1 mt-4">
@@ -335,7 +370,12 @@
           </ul>
         </div>
         <div class="col-sm-2">           
-          <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+          <a href="#" class="ms-3 float-end">
+            <span class="fa-solid fa-lg fa-pencil"></span>
+          </a>
+          <a href="#" class="ms-5 float-end">
+            <span class="fa-solid fa-lg fa-trash-can"></span>
+          </a>        
         </div>
       </div>
       <hr>
@@ -356,7 +396,12 @@
           </ul>
         </div>
         <div class="col-sm-2">           
-          <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+          <a href="#" class="ms-3 float-end">
+            <span class="fa-solid fa-lg fa-pencil"></span>
+          </a>
+          <a href="#" class="ms-5 float-end">
+            <span class="fa-solid fa-lg fa-trash-can"></span>
+          </a>        
         </div>
       </div>
     </div>
@@ -366,7 +411,12 @@
     <div id="course-card" class="card">
       <div class="row"> 
         <div class="col-6"><h3>Cursos y conocimientos</h3></div>
-        <div class="col-6"><button id="chevron-cursos" onclick= "desplegar('cursos-visible','chevron-cursos')" class="btn fa-solid float-end fa-chevron-up"></button><button class="btn float-end fa-solid fa-add"></button></div>
+        <div class="col-6">
+          <button id="chevron-cursos" onclick= "desplegar('cursos-visible','chevron-cursos')" 
+          class="btn fa-solid float-end fa-chevron-up"></button>
+          <a href="#" type="button" class="btn float-end fa-solid fa-home"></a>
+          <button class="btn float-end fa-solid fa-add"></button>
+        </div>
       </div>
       <div id="cursos-visible">
         <hr>
@@ -385,7 +435,11 @@
             </ul>
           </div>
           <div class="col-sm-2">           
-            <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+            <a href="#" class="ms-3 float-end">
+              <span class="fa-solid fa-lg fa-pencil"></span>
+            </a>
+            <a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span>
+            </a>        
           </div>
         </div>
         <hr>
@@ -405,7 +459,12 @@
             </ul>
           </div>
           <div class="col-sm-2">           
-            <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+            <a href="#" class="ms-3 float-end">
+              <span class="fa-solid fa-lg fa-pencil"></span>
+            </a>
+            <a href="#" class="ms-5 float-end">
+              <span class="fa-solid fa-lg fa-trash-can"></span>
+            </a>        
           </div>
         </div>
         <hr>
@@ -424,7 +483,12 @@
           </ul>
         </div>
         <div class="col-sm-2">           
-          <a href="#" class="ms-3 float-end"><span class="fa-solid fa-lg fa-pencil"></span></a><a href="#" class="ms-5 float-end"><span class="fa-solid fa-lg fa-trash-can"></span></a>        
+          <a href="#" class="ms-3 float-end">
+            <span class="fa-solid fa-lg fa-pencil"></span>
+          </a>
+          <a href="#" class="ms-5 float-end">
+            <span class="fa-solid fa-lg fa-trash-can"></span>
+          </a>        
         </div>
       </div>
       </div>
