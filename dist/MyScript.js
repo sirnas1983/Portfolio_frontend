@@ -1,10 +1,10 @@
-function desplegar(seccion,chevron){
-  if (document.getElementById(seccion,chevron).style.display == "none"){
+function desplegar(seccion,boton){
+  if (document.getElementById(seccion).style.display == "none"){
     document.getElementById(seccion).style.display = "block";
-    document.getElementById(chevron).className = "btn float-end fa-solid fa-arrows-up-to-line";
+    document.getElementById(boton).className = "btn fa-solid float-end fa-chevron-up";
     
 } else {
     document.getElementById(seccion).style.display = "none";
-    document.getElementById(chevron).className = "btn float-end fa-solid fa-chevron-down";
+    document.getElementById(boton).className = "btn fa-solid float-end fa-chevron-down";
   }
 }

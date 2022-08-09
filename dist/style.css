@@ -1,6 +1,6 @@
-/** {
-    font-size: medium;
-}*/
+* {
+    font-family:'Roboto';
+}*
 
 #navbar-links-list {
     list-style-type: none;
@@ -22,12 +22,15 @@
     z-index: 3;
 }
 
-#presentation-card, #expertize-card, #knowledge-card, #aboutme-card, #language-card, #course-card {
-    border: none;
+#presentation-card, #skills-card, #expertize-card, #knowledge-card, #aboutme-card, #language-card, #course-card {
     background-color: rgba(254, 254, 248, 0.95);
     color:black;
-    box-shadow: 5px 5px 10px black, -5px -5px 10px black, -5px 5px 10px black, 5px -5px 10px black;
-    margin-left: 2rem;
+    margin-left: 0.5rem;
+    border: 0.5rem solid rgb(81, 98, 105);
+}
+
+#btn-modal {
+    color:aliceblue;
 }
 
 .no-list-style {
@@ -56,17 +59,15 @@
 }
 
 h1, h2, h3, h4 {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 400;
-    text-shadow:  1px 1px 5px rgba(147, 24, 24, 0.409);
     
+    font-weight: 400;
 }
 
 #profile-image{
     max-width: 200px; 
     margin-top:-120px;
-    outline: solid black 0.1rem;
     border-radius: 50%;
+    box-shadow: 5px 5px 10px black, -5px -5px 10px black, -5px 5px 10px black, 5px -5px 10px black;
 }
 
 body {
@@ -75,7 +76,7 @@ body {
 }
 
 #portfolio-body {
-    font-family: Montserrat;
+    font-family: "Roboto";
     color:antiquewhite;
     font-weight: 800;
   }
