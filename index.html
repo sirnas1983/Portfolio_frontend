@@ -17,8 +17,7 @@
     <!-- Barra de navegacion superior -->
     <script src="dist/MyScript.js"></script>
 </head>
-<body>
-    <!-- Barra de navegacion superior -->
+<body onload="nav()" onkeypress="reset()">    <!-- Barra de navegacion superior -->
     <div id="navbar" class="navbar navbar-expand-sm bg-dark">
       <ul class="container-fluid ms-2" id="navbar-links-list">
           <li class="nav-item navbar-brand">
@@ -78,6 +77,7 @@
             <p>Direccion correo electronico: <a href="mailto: dahiebl@gmail.com">dahiebl@gmail.com</a></p>
             <p>Whatsapp: <a href="https://api.whatsapp.com/send?phone=5493774419374" target="_blank">+54 9 3774 419374</a></p>
             <p>GitHUB: <a href="https://github.com/sirnas1983" target="_blank">Ir a mi repositorio remoto</a></p>
+            <div><a href="#" class="btn float-end fa-solid fa-pencil"></a> </div>
           </div>
         </div>
       </div>
@@ -97,14 +97,29 @@
           <span class="habilidad">Computacion <button class="habilidad-cierre">x</button></span>
           <span class="habilidad">Noticias <button class="habilidad-cierre">x</button></span>
           <span class="habilidad">Musica en general <button class="habilidad-cierre">x</button></span>
-          <a href="#" class="btn float-end fa-solid fa-pencil"></a> 
+          <div><a href="#" class="btn float-end fa-solid fa-pencil"></a> </div>
           </div>
         </div>
       </div>
     </div>
+    <!--PAGINACION CV. GITHUB-->
+    <div id="contenedor" class="contenedor-sidebar">
+      <div id="mySidebar" class="sidebar">
+        <a class="btn m-1" href="#">Ir arriba</a>
+        <a class="btn m-1" href="#aboutme-card">Acerca de mi</a>
+        <a class="btn m-1" href="#skills-card">Habilidades</a>
+        <a class="btn m-1" href="#knowledge-card">Estudios</a>
+        <a class="btn m-1" href="#language-card">Idiomas</a>
+        <a class="btn m-1" href="#expertize-card">Experiencia laboral</a>
+        <a class="btn m-1" href="#course-card">Conocimientos</a>
+      </div>
+      <div id="boton-sidebar">
+        <button id="boton-sidebar-chevron" onclick="nav()" class="btn fa-solid fa-xl fa-chevron-left" style="color:white;"></button>
+      </div>
+    </div>
     <!-- Tarjeta principal -->
     <div id="presentation-card" class="card">
-        <div style="margin:-0.5em;">
+        <div style="margin:-0.5em">
           <img id="banner" src="img/banner.jpg" alt="Banner">
         </div>
         <div id="info" style="padding:0px;">
@@ -154,12 +169,6 @@
         </div>
         <div class="p-3">
           <a href="" data-bs-toggle="modal" data-bs-target="#modal-intereses"><button class="btn btn-primary boton" >Intereses</button></a>
-          <a href="#aboutme-card"><button type="button" class="btn btn-secondary boton" >Acerca de mi</button></a>
-          <a href="#skills-card"><button type="button" class="btn btn-secondary boton">Habilidades</button></a>
-          <a href="#knowledge-card"><button type="button" class="btn btn-secondary boton" >Estudios</button></a>
-          <a href="#language-card"><button type="button" class="btn btn-secondary boton" >Idiomas</button></a>
-          <a href="#expertize-card"><button type="button" class="btn btn-secondary boton" >Experiencia laboral</button></a>
-          <a href="#course-card"><button type="button" class="btn btn-secondary boton" >Conocimientos</button></a>
         </div>
     </div>
     <!-- Acerca de mi -->

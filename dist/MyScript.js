@@ -1,10 +1,33 @@
 function desplegar(seccion,boton){
   if (document.getElementById(seccion).style.display == "none"){
     document.getElementById(seccion).style.display = "block";
-    document.getElementById(boton).className = "btn fa-solid float-end fa-chevron-up";
+    document.getElementById(boton).classList.replace("fa-chevron-down","fa-chevron-up");
     
 } else {
     document.getElementById(seccion).style.display = "none";
-    document.getElementById(boton).className = "btn fa-solid float-end fa-chevron-down";
+    document.getElementById(boton).classList.replace("fa-chevron-up","fa-chevron-down");
+
   }
+}
+
+function reset(){
+  if (document.getElementById("mySidebar").style.width == "0px") {
+  } else {
+    document.getElementById("mySidebar").style.width = "0px";
+    document.getElementById("contenedor").style.width = "50px";
+    document.getElementById("boton-sidebar-chevron").classList.replace("fa-chevron-right","fa-chevron-left");
+    } 
+}
+
+function nav() {
+  if (document.getElementById("mySidebar").style.width == "0px"){
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("contenedor").style.width = "300px";
+  document.getElementById("boton-sidebar-chevron").classList.replace("fa-chevron-left","fa-chevron-right");
+  
+} else {
+  document.getElementById("mySidebar").style.width = "0px";
+  document.getElementById("contenedor").style.width = "50px";
+  document.getElementById("boton-sidebar-chevron").classList.replace("fa-chevron-right","fa-chevron-left");
+}
 }

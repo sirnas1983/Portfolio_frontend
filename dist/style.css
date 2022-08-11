@@ -64,8 +64,10 @@
 }
 
 .modal .habilidad-cierre {
-    background-color: rgb(189, 55, 55);
-    border-style: none;
+    color:inherit;
+    background-color:none;
+    border: solid 0.1rem black;
+    margin-bottom: 0.25rem;
 }
 
 #presentation-card, #skills-card, #expertize-card, #knowledge-card, #aboutme-card, #language-card, #course-card {
@@ -97,6 +99,10 @@
 
 .boton:hover {
     box-shadow:  0.1rem 0.1rem 0.25rem black;
+}
+
+.modal{
+    color:aliceblue;
 }
 
 #banner {
@@ -141,3 +147,81 @@ body {
     padding-bottom: 1rem;
 }
 
+/*             ---------------------------------                  */
+
+#contenedor{
+    height: 100%;
+    width: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: none;
+    overflow-x: clip;
+    transition: 1s;
+    pointer-events: none;
+}  
+
+  .sidebar {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 40px;
+    right: 0;
+    background-color: #212529;
+    overflow-x: inherit;
+    transition: inherit;
+    padding-top: 60px;
+    pointer-events: all;
+  }
+
+  #boton-sidebar{
+    padding: 1rem;
+    background-color:#212529;
+    color:aliceblue;
+    z-index:5;
+    width: 50px; 
+    position:absolute; 
+    top:50%; 
+    left: 0px;
+    border-radius: 2rem 0 0 2rem;
+    pointer-events: all;
+ }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #ffffff;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color:rgba(10, 10, 10, 0);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 10px;}
+    .sidebar a {font-size: 14px;}
+  }
