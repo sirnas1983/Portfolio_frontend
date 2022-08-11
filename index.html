@@ -17,7 +17,11 @@
     <!-- Barra de navegacion superior -->
     <script src="dist/MyScript.js"></script>
 </head>
-<body onload="nav()" onkeypress="reset()">    <!-- Barra de navegacion superior -->
+<body onload="reset()">    
+  <!--  -->
+    <div style="position: absolute; top:0; width:100%; height:60px;">
+    </div> 
+  <!-- Barra de navegacion superior -->
     <div id="navbar" class="navbar navbar-expand-sm bg-dark">
       <ul class="container-fluid ms-2" id="navbar-links-list">
           <li class="nav-item navbar-brand">
@@ -35,6 +39,7 @@
           </li>
       </ul>
     </div> 
+    <!--CUERPO DE PORTFOLIO-->
     <div id="portfolio-body">
     <!--FORMULARIO DE LOGIN-->
     <div class="modal fade" id="login">
@@ -102,22 +107,24 @@
         </div>
       </div>
     </div>
-    <!--PAGINACION CV. GITHUB-->
-    <div id="contenedor" class="contenedor-sidebar">
+    <!--PAGINACION-->
+    <div id="contenedor" class="contenedor-sidebar"  onmouseover="deploy()" onmouseleave="reset()">
       <div id="mySidebar" class="sidebar">
         <a class="btn m-1" href="#">Ir arriba</a>
         <a class="btn m-1" href="#aboutme-card">Acerca de mi</a>
         <a class="btn m-1" href="#skills-card">Habilidades</a>
         <a class="btn m-1" href="#knowledge-card">Estudios</a>
         <a class="btn m-1" href="#language-card">Idiomas</a>
-        <a class="btn m-1" href="#expertize-card">Experiencia laboral</a>
+        <a class="btn m-1" href="#expertize-card">Experiencia</a>
         <a class="btn m-1" href="#course-card">Conocimientos</a>
       </div>
       <div id="boton-sidebar">
-        <button id="boton-sidebar-chevron" onclick="nav()" class="btn fa-solid fa-xl fa-chevron-left" style="color:white;"></button>
+        <span id="boton-sidebar-chevron" class="btn fa-solid fa-xl fa-chevron-left"></span>
       </div>
     </div>
     <!-- Tarjeta principal -->
+    <!--CUERPO DE PORTFOLIO-->
+  <div id="portfolio-body">
     <div id="presentation-card" class="card">
         <div style="margin:-0.5em">
           <img id="banner" src="img/banner.jpg" alt="Banner">
@@ -223,7 +230,7 @@
               <span class="habilidad">Autocad: avanzado <button class="habilidad-cierre">x</button></span>
               <span class="habilidad">Base de datos: intermedio <button class="habilidad-cierre">x</button></span>
               <span class="habilidad">Electricidad: avanzado <button class="habilidad-cierre">x</button></span>
-              <span class="habilidad">Automatismo de procesos industriales: avanzado <button class="habilidad-cierre">x</button></span>
+              <span class="habilidad">Automatismo: avanzado <button class="habilidad-cierre">x</button></span>
             </h5>
           </div>
           <div class="col-sm-6">

@@ -147,7 +147,7 @@ body {
     padding-bottom: 1rem;
 }
 
-/*             ---------------------------------                  */
+/*             --------------- CSS para sidebar -------------                  */
 
 #contenedor{
     height: 100%;
@@ -158,13 +158,13 @@ body {
     right: 0;
     background-color: none;
     overflow-x: clip;
-    transition: 1s;
+    transition: 500ms;
     pointer-events: none;
 }  
 
   .sidebar {
     height: 100%;
-    width: 0px;
+    width: 5px;
     position: fixed;
     z-index: 1;
     top: 40px;
@@ -178,7 +178,7 @@ body {
 
   #boton-sidebar{
     padding: 1rem;
-    background-color:#212529;
+    background-color: slategray;
     color:aliceblue;
     z-index:5;
     width: 50px; 
@@ -188,24 +188,28 @@ body {
     border-radius: 2rem 0 0 2rem;
     pointer-events: all;
  }
+ #boton-sidebar-chevron{
+    margin-left: -10px;
+    color:aliceblue;
+ }
   
   .sidebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #ffffff;
     display: block;
-    transition: 0.3s;
+    transition: none;
   }
   
   .sidebar a:hover {
-    color: #ffffff;
+    background-color: #ffffffa6;
   }
   
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color:rgba(10, 10, 10, 0);
+    background-color:slategray;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -216,12 +220,23 @@ body {
   }
   
   #main {
-    transition: margin-left .5s;
+    transition: 0.5s;
     padding: 16px;
   }
   
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 10px;}
-    .sidebar a {font-size: 14px;}
+  @media screen and (max-height: 560px) {
+    .sidebar {padding-top: 60px;
+            }
+
+    .sidebar a {font-size: 1rem;
+                transition: 500ms;
+            }
   }
+
+  @media (pointer:none) {
+    #boton-sidebar-chevron { 
+                display:none;
+    }  
+    #boton-sidebar { height:60px;
+    }  
+    }
